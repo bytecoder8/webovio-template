@@ -1,6 +1,10 @@
 @import 'normalize.scss';
 @import 'fonts.scss';
 
+/* Variables */
+$link-color: #D4D6D4;
+$link-hover-color: #FFD723;
+
 /* Global styles */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -26,8 +30,31 @@ image {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
-  text-decoration: underline;
-  color: #FFD723;
+  color: $link-color;
+
+  position: relative;
+  padding-left: 6px;
+  border-bottom: 1px solid $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+    border-bottom: 1px solid $link-hover-color;
+  }
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    left: -7px;
+    top: 4px;
+    width: 7px;
+    height: 12px;
+
+    background-image: url("../images/caret-right.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    
+  }
 }
 
 
@@ -91,7 +118,8 @@ image {
 
 /* hero */
 .hero {
-  background-image: url('/images/header-bg.jpg');
+  background-image: url("/images/header-bg.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -124,13 +152,14 @@ image {
   &__description {
     margin: 0;
     margin-top: 24px;
+    margin-bottom: 45px;
+    
     font-size: 16px;
     line-height: 26px;
   }
 
   &__link {
-    display: block;
-    margin-top: 45px;
+    color: $link-hover-color;
   }
 }
 /* /hero */
@@ -138,8 +167,11 @@ image {
 
 /* Services */
 .services {
-
+  margin-bottom: 24px;
   &__title {
+    margin: 0;
+    margin-top: 150px;
+
     font-family: Poppins;
     font-weight: 700;
     font-size: 36px;
@@ -209,3 +241,48 @@ image {
   }
 }
 /* /Services */
+
+
+/* Call to Action */
+.call-action {
+  max-width: 1275px;
+  padding-left: calc(100% - 1275px);
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  position: relative;
+  top: 170px;
+  
+  background-color: #fafafa;
+  box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
+
+  &__header {
+    max-width: 822px;
+    margin: 0;
+    margin-bottom: 50px;
+
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 74px;
+
+    color: #4D533C;
+  }
+
+  &__link {
+    text-transform: uppercase;
+  }
+}
+/* /Call to Action */
+
+
+/* Footer Blocks */
+.footer {
+  background-image: url("../images/footer-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top: 170px + 120px;
+  height: 920px;
+}
