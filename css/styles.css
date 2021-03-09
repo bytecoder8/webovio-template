@@ -471,7 +471,7 @@ image {
   .services__list {
     list-style: none;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 58px;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -513,13 +513,12 @@ image {
 /* /Services */
 /* Call to Action */
 .call-action {
-  box-sizing: content-box;
   max-width: 1275px;
   padding-left: calc((100% - 1110px) / 2);
   padding-top: 70px;
   padding-bottom: 70px;
   position: relative;
-  top: 170px;
+  top: 117px;
   background-color: #fafafa;
   box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947); }
   .call-action__header {
@@ -541,21 +540,23 @@ image {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 290px;
-  height: 920px; }
+  background-color: #4F553D;
+  padding-top: 242px; }
   .footer__contacts {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap; }
   .footer__contacts-item:last-child {
-    margin-left: 128px; }
+    margin-left: 130px; }
   .footer__contacts-title {
     font-family: Poppins;
     font-size: 16px;
     line-height: 40px;
     color: #B6C197; }
   .footer__contacts-value {
+    display: block;
+    margin-top: 8px;
     font-family: Poppins;
     font-weight: 700;
     font-style: normal;
@@ -572,10 +573,10 @@ image {
     padding-top: 60px;
     border-top: 1px solid #5D6544; }
     .footer__middle .links-column:last-child {
-      padding-left: 55px;
+      padding-left: 105px;
       border-left: 1px solid #5D6544; }
   .footer__bottom {
-    margin-top: 32px;
+    margin-top: 60px;
     padding-top: 24px;
     border-top: 1px solid #5D6544;
     display: flex;
@@ -585,9 +586,12 @@ image {
     font-family: Poppins;
     font-size: 14px;
     line-height: 21px;
-    color: #B5C096; }
+    color: #B5C096;
+    margin-right: 26px; }
 
 .links-column__title {
+  margin: 0;
+  margin-bottom: 21px;
   font-family: Poppins;
   font-weight: 600;
   font-size: 16px;
@@ -610,12 +614,18 @@ image {
     text-decoration: underline; }
 
 .links-column__text {
+  margin: 0;
+  padding: 0;
+  padding-top: 2px;
+  max-width: 270px;
   font-family: Poppins;
   font-size: 16px;
   line-height: 26px;
   color: #B6C197; }
 
 .links-column__email {
+  display: block;
+  margin-top: 22px;
   font-family: Poppins;
   font-weight: 700;
   font-size: 24px;
