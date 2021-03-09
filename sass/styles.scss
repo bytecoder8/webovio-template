@@ -179,7 +179,7 @@ image {
 
 /* Services */
 .services {
-  margin-bottom: 24px;
+  margin-bottom: 46px;
   &__title {
     margin: 0;
     margin-top: 150px;
@@ -235,17 +235,16 @@ image {
   }
 
   &__description {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 26px;
-    color: rgba(33, 56, 66, 0.6);
-
+    max-width: 194px;
     margin: 0;
     padding: 0;
     margin-top: 20px;
-    margin-bottom: 56px;
+    margin-bottom: 34px;
+
+    font-family: Poppins;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(33, 56, 66, 0.6);
   }
 
   &__actions {
@@ -368,6 +367,68 @@ image {
   }
 }
 
+/* Links to social networks */
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 11px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+
+    color: #5E6648;
+
+    background-color: #444A34;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18px;
+
+    &:hover {
+      background-color: #FFD723;
+    }
+
+    &--fb {
+      background-size: 14px;
+      background-image: url("data:image/svg+xml, #{$icon-fb}");
+      &:hover {
+        background-image: url("data:image/svg+xml, #{$icon-fb-hover}");
+      }
+    }
+  
+    &--tw {
+      background-image: url("data:image/svg+xml, #{$icon-tw}");
+      &:hover {
+        background-image: url("data:image/svg+xml, #{$icon-tw-hover}");
+      }
+    }
+  
+    &--gp {
+      background-image: url("data:image/svg+xml, #{$icon-gp}");
+      &:hover {
+        background-image: url("data:image/svg+xml, #{$icon-gp-hover}");
+      }
+    }
+  
+    &--in {
+      background-image: url("data:image/svg+xml, #{$icon-in}");
+      &:hover {
+        background-image: url("data:image/svg+xml, #{$icon-in-hover}");
+      }
+    }
+  }
+}
+
 .links-column {
 
   &__title {
@@ -408,6 +469,7 @@ image {
     max-width: 270px;
 
     font-family: Poppins;
+    
     font-size: 16px;
     line-height: 26px;
     color: #B6C197;
@@ -423,28 +485,8 @@ image {
     line-height: 38px;
     color: #FFFFFF;
   }
-}
 
-/* Links to social networks */
-.social {
-  list-style: none;
-  display: flex;
-
-  &__item {
-  }
-
-  &__link {
-
-    &--fb {
-    }
-  
-    &--tw {
-    }
-  
-    &--gp {
-    }
-  
-    &--in {
-    }
+  &__social {
+    margin-top: 24px;
   }
 }
